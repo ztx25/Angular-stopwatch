@@ -1,0 +1,37 @@
+<div class="container">
+  <h1 class="container__heading">
+    Stopwatch
+  </h1>
+  <div class="container__values">
+    {{ timeState.hours | number: '2.0' }} : {{ timeState.minutes | number: '2.0'  }} : {{ timeState.seconds | number: '2.0'  }}
+  </div>
+
+  <div class="container__buttons">
+    <button
+      type="button"
+      (click)="toggle()"
+      class="container__button"
+      [ngClass]="{
+        'container__button--start': !isRunning,
+        'container__button--start-red': isRunning
+      }"
+    >
+      {{ isRunning ? 'Stop' : 'Start'}}
+    </button>
+    
+    <button
+      type="button"
+      class="container__button container__button--wait"
+      (click)="wait($event)"
+    >
+      Wait
+    </button>
+    <button
+      type="button"
+      (click)="reset()"
+      class="container__button container__button--reset"
+    >
+      Reset
+    </button>
+  </div>
+</div>
