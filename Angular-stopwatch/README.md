@@ -1,8 +1,8 @@
 # Stopwatch
 
-Simple Stopwatch written with Angular
+Stopwatch written with Angular
 
-- You could check demo out [DEMO LINK](https://ztx25.github.io/Angular-stopwatch/).
+- You can check demo out [DEMO LINK](https://ztx25.github.io/Angular-stopwatch/).
 
 ### Dependencies
 * Node v14.9.0

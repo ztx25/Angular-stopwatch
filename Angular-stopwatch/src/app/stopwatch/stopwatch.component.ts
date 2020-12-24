@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { timer, fromEvent, Subscription } from 'rxjs';
 import { timeInterval } from 'rxjs/operators';
 
-let listenerCount = 0;  //удалить
-
 export interface Timer {
   time: number
   hours: number
@@ -25,7 +23,6 @@ export let initialTimeState: Timer = {
 })
 export class StopwatchComponent implements OnInit {
   timeState = { ...initialTimeState }
-
   isRunning: boolean = false;
   betweenСlicksInterval: number = 300;
   buttonClick: Subscription;
@@ -35,15 +32,9 @@ export class StopwatchComponent implements OnInit {
   }
 
   wait(event: MouseEvent): void {
-    
-    const currentLitener = ++listenerCount;  //удалить
-
     this.buttonClick = fromEvent(event.target, 'click')
       .pipe(timeInterval())
         .subscribe(click => {
-          
-          console.log(`listen ${currentLitener}`)  //удалить
-
           if (click.interval < this.betweenСlicksInterval) {
             this.isRunning = false;
           }
