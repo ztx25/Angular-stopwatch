@@ -16,3 +16,8 @@ Stopwatch written with Angular
 * Run `npm install` in your terminal
 * Run `npm start`
 * Open your browser at `http://localhost:4200/`
+
+* "Start" - start stopwatch
+* "Stop" - stop stopwatch
+* "Wait" - (works on a double click no more than 300 ms)
+* «Reset» - reset stopwatch to 0
