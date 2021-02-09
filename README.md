@@ -19,5 +19,5 @@ Stopwatch written with Angular
 
 * "Start" - start stopwatch
 * "Stop" - stop stopwatch
-* "Wait" - (works on a double click no more than 300 ms)
+* "Wait" - works on a double click no more than 300 ms
 * «Reset» - reset stopwatch to 0
